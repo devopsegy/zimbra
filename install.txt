@@ -1,0 +1,9 @@
+1-  wget https://dl.eff.org/certbot-auto -P /usr/local/bin
+2-  chmod a+x /usr/local/bin/certbot-auto
+3-  wget https://raw.githubusercontent.com/YetOpen/certbot-zimbra/master/certbot_zimbra.sh -P /usr/local/bin
+4-  chmod +x /usr/local/bin/certbot_zimbra.sh
+5-  certbot_zimbra.sh -n
+6-  crontabe -e 
+00 3 * * * root /usr/local/bin/certbot-auto renew --post-hook "/usr/local/bin/certbot_zimbra.sh -r -d $(/opt/zimbra/bin/zmhostname)"
+
+
