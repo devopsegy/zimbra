@@ -1,0 +1,11 @@
+1- /opt/zimbra/conf/relay_password
+smtp.sendgrid.net james:mypa55w0rd
+
+postmap /opt/zimbra/conf/relay_password
+postmap -q smtp.sendgrid.net /opt/zimbra/conf/relay_password
+zmprov ms `zmhostname` zimbraMtaSmtpSaslPasswordMaps lmdb:/opt/zimbra/conf/relay_password
+zmprov ms `zmhostname` zimbraMtaSmtpSaslAuthEnable yes
+zmprov ms `zmhostname` zimbraMtaSmtpCnameOverridesServername no
+zmprov ms `zmhostname` zimbraMtaSmtpTlsSecurityLevel may
+zmprov ms `zmhostname` zimbraMtaSmtpSaslSecurityOptions noanonymous
+zmprov ms `zmhostname` zimbraMtaRelayHost smtp.sendgrid.net:587
