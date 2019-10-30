@@ -1,0 +1,1 @@
+/opt/zimbra/jetty/webapps/zimbra/skins/_base/logos
