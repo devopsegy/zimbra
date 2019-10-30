@@ -2,3 +2,4 @@
 to change the titel 
 /opt/zimbra/jetty/webapps/zimbra/WEB-INF/classes/messages/ZmMsg.properties 
 zimbraTitle
+zmmailboxdctl restart
