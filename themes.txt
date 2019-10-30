@@ -1,1 +1,4 @@
 /opt/zimbra/jetty/webapps/zimbra/skins/_base/logos
+to change the titel 
+/opt/zimbra/jetty/webapps/zimbra/WEB-INF/classes/messages/ZmMsg.properties 
+zimbraTitle
